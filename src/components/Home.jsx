@@ -20,6 +20,7 @@ const Home = () => {
             currentAccount = accounts[0];
             // Do any other work!
             console.log('Current Account', currentAccount)
+            setUser(currentAccount)
         }
     }
 
@@ -64,7 +65,7 @@ const Home = () => {
             <div className="home__button__container">
                 <Button onClick={handleConnect} disabled={isButtonActive} variant="contained" color="primary">
                     Connect to Metamask
-            </Button>
+                </Button>
             </div>
             {user && <p>user : {user}</p>}
         </div>
